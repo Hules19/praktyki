@@ -478,7 +478,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8884eed15ef428c9970d3299bd20d8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerMSO: {fileID: 0}
+  PlayerMSO: {fileID: 11400000, guid: fbcb05189cc65b448ade892efa148f88, type: 2}
   IsGrounded: 0
   GroundCheck: {fileID: 1295529073}
 --- !u!1 &961739749

@@ -6,10 +6,12 @@ using UnityEngine.InputSystem;
 public class PlayerInput : LRMovement.IPlayerActions
 {
     private LRMovement playerControls;
-    private SimpleMovement IsGrounded;
-    
+    private SimpleMovement isGrounded;
+    [SerializeField] private PlayerModsSO PlayerMSO;
+
     public PlayerInput()
     {
+        
         playerControls = new LRMovement();
         playerControls.Player.SetCallbacks(this);
         playerControls.Player.Enable();
@@ -25,8 +27,9 @@ public class PlayerInput : LRMovement.IPlayerActions
 
     public void OnJump(InputAction.CallbackContext context)
     {
+       
+       if (!context.started) return;
+       OnJumpPerformed?.Invoke();
         
-        if (!context.started && IsGrounded.IsGrounded) return;
-        OnJumpPerformed?.Invoke();
     }
 }

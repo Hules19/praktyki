@@ -12,3 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92febaaee267b334a929e7ceb71b8ae1, type: 3}
   m_Name: PlayerModsSO
   m_EditorClassIdentifier: 
+  movementSpeed: 5
+  JumpForce: 5
+  IsGrounded: 1

@@ -56,16 +56,17 @@ namespace DefaultNamespace
         {
             ray = new Ray(GroundCheck.transform.position, Vector3.down);
 
-            if (Physics.Raycast(ray, out RaycastHit hit))
+            if (Physics.Raycast(ray, out RaycastHit hit, 0.6f))
             {
                 if (hit.collider.CompareTag("Ground"))
                 {
-                    IsGrounded=false;
-                    Debug.Log("Grounded");
+                    IsGrounded = true;
+                    Debug.Log(IsGrounded);
                 }
                 else
                 {
-                    IsGrounded = true;
+                    IsGrounded = false;
+                    Debug.Log(IsGrounded);
                 }
 
             }
